@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Glassmorphism & Modern 2026 Design */
+@layer base {
+  * {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-black text-white;
+  }
+}
+
+@layer components {
+  /* Glass Card Effect */
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-2xl;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    box-shadow: 
+      0 8px 32px 0 rgba(0, 0, 0, 0.37),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* Glass Input */
+  .glass-input {
+    @apply backdrop-blur-md bg-white/5 border border-white/20 rounded-xl px-4 py-3;
+    @apply text-white placeholder:text-white/50;
+    @apply focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50;
+    @apply transition-all duration-300;
+    box-shadow: 
+      0 4px 16px 0 rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-input:focus {
+    @apply bg-white/10 border-orange-500/50;
+    box-shadow: 
+      0 8px 24px 0 rgba(251, 146, 60, 0.2),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  }
+
+  /* Glass Button */
+  .glass-button {
+    @apply backdrop-blur-md bg-gradient-to-r from-orange-500 to-orange-600;
+    @apply border border-orange-400/30 rounded-xl px-6 py-3;
+    @apply text-white font-semibold shadow-lg;
+    @apply hover:from-orange-600 hover:to-orange-700;
+    @apply active:scale-95 transition-all duration-200;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+    box-shadow: 
+      0 8px 24px 0 rgba(251, 146, 60, 0.3),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-button:hover {
+    box-shadow: 
+      0 12px 32px 0 rgba(251, 146, 60, 0.4),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  }
+
+  /* Static Background */
+  .animated-bg {
+    @apply bg-black;
+  }
+
+  /* Glow Effect */
+  .glow-orange {
+    box-shadow: 0 0 20px rgba(251, 146, 60, 0.3);
+  }
+
+  .glow-orange:hover {
+    box-shadow: 0 0 30px rgba(251, 146, 60, 0.5);
+  }
+
+  /* Subtle Fade In */
+  .fade-in {
+    opacity: 1;
+  }
+
+  /* Logo Club - Transformation des couleurs */
+  .logo-club {
+    /* Technique intelligente : 
+       - invert(100%) : noir → blanc, orange → cyan
+       - hue-rotate(180deg) : cyan → orange
+       Résultat : traits blancs, écritures orange préservées */
+    filter: invert(100%) hue-rotate(180deg);
+  }
+}
