@@ -24,7 +24,7 @@ Les clés Supabase suivantes sont fournies via Smartschool:
 - `SUPABASE_URL`
 - `SUPABASE_KEY`
 
-Créer un fichier `.env` à la racine du dossier `nuxt-app/` :
+Créer un fichier `.env` à la racine du dossier :
 
 ```env
 SUPABASE_URL=https://xxxxx.supabase.co
@@ -51,7 +51,7 @@ Fournis via Smartschool.
 ## 📁 Structure du projet
 
 ```
-nuxt-app/
+tfe-ping/
 ├── app/
 │   ├── assets/          # Assets (CSS, images)
 │   ├── middleware/      # Middleware de sécurité
