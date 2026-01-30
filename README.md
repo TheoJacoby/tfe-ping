@@ -13,7 +13,7 @@ Application web développée avec **Nuxt 3**, **Supabase**, **TypeScript** et **
 
 ```bash
 # Cloner ou télécharger le projet
-cd tfe-ping/nuxt-app
+cd tfe-ping
 npm install
 ```
 
