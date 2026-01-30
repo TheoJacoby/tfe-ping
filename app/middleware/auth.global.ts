@@ -1,7 +1,7 @@
 import type { UserRole } from '@/types';
 
 export default defineNuxtRouteMiddleware(async (to) => {
-  if (to.path === '/login') return;
+  if (to.path === '/login' || to.path === '/') return;
 
   const user = useSupabaseUser();
   const supabase = useSupabaseClient();
@@ -34,4 +34,3 @@ export default defineNuxtRouteMiddleware(async (to) => {
     }
   }
 });
-

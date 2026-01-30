@@ -10,7 +10,7 @@
         <div class="flex items-center justify-between mb-6">
           <div class="flex items-center gap-4">
             <img 
-              :src="logoTT" 
+              src="/logoTT.png" 
               alt="Logo du club" 
               class="h-12 w-auto logo-club"
             />
@@ -52,7 +52,6 @@
 </template>
 
 <script setup lang="ts">
-import logoTT from '@/assets/img/logoTT.png';
 
 const supabase = useSupabaseClient();
 

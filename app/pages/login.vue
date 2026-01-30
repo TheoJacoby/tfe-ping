@@ -9,7 +9,7 @@
       <div class="text-center mb-8">
         <div class="flex justify-center mb-4">
           <img 
-            :src="logoTT" 
+            src="/logoTT.png" 
             alt="Logo du club" 
             class="h-20 w-auto logo-club"
           />
@@ -86,7 +86,6 @@
 import { ref } from 'vue';
 import { useSupabaseClient } from '#imports';
 import type { UserRole, Profile } from '@/types';
-import logoTT from '@/assets/img/logoTT.png';
 
 const supabase = useSupabaseClient();
 
